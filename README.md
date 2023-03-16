@@ -1,1 +1,1 @@
-ДЗ #6 (goit-markup-hw-07)
+ДЗ #7 (goit-markup-hw-07)
