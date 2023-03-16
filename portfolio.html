@@ -25,15 +25,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- Head  -->
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
           <a class="logo" href="./index.html">
-            <span class="logo-icon">Web</span>Studio
+            <span class="logo-text">Web</span>Studio
           </a>
 
           <ul class="header-menu">
-            <li><a class="header-link" href="./index.html">Studio</a></li>
+            <li><a class="header-link" href="/index.html">Studio</a></li>
             <li>
               <a class="header-link link-page" href="./portfolio.html"
                 >Portfolio</a
@@ -57,12 +58,92 @@
             </li>
           </ul>
         </address>
+
+        <button
+          class="menu-toggle-open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="./index.html" class="menu-link-nav">Studio</a>
+            </li>
+            <li class="menu-item">
+              <a href="./portfolio.html" class="menu-link-nav">Portfolio</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="menu-link-nav active">Contacts</a>
+            </li>
+          </ul>
+
+          <div>
+            <address class="menu-address-wrap">
+              <ul class="">
+                <li class="menu-item">
+                  <a href="tel:+110001111111" class="menu-address active"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a href="mailto:info@devstudio.com" class="menu-address mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="menu-social">
+              <li class="menu-social-item">
+                <a class="menu-link" href="#">
+                  <svg class="menu-soc-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-link" href="#">
+                  <svg class="menu-soc-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-link" href="#">
+                  <svg class="menu-soc-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-social-item">
+                <a class="menu-link" href="#">
+                  <svg class="menu-soc-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
+
     <main>
       <section class="section-portfolio">
         <!-- Filters -->
-        <div class="container">
+        <div class="container portfolio-container">
           <h1 class="visually-hidden">Filters</h1>
           <ul class="filters-menu">
             <li>
@@ -86,8 +167,13 @@
           <ul class="project-list">
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_1.jpg   1x,
+                      ./images/Project_Card_1@2.jpg 2x
+                    "
                     src="./images/Project_Card_1.jpg"
                     alt="banking app"
                     width="360"
@@ -102,18 +188,23 @@
                   </div>
                 </div>
                 <div class="project-content">
-                  <h2 class="section-subtitle">
+                  <h2 class="project-subtitle">
                     Banking App Interface Concept
                   </h2>
-                  <p class="section-text">App</p>
+                  <p class="project-desc">App</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_2.jpg   1x,
+                      ./images/Project_Card_2@2.jpg 2x
+                    "
                     src="./images/Project_Card_2.jpg"
                     alt="cashless payment"
                     width="360"
@@ -128,16 +219,21 @@
                   </div>
                 </div>
                 <div class="project-content">
-                  <h2 class="section-subtitle">Cashless Payment</h2>
-                  <p class="section-text">Marketing</p>
+                  <h2 class="project-subtitle">Cashless Payment</h2>
+                  <p class="project-desc">Marketing</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_3.jpg   1x,
+                      ./images/Project_Card_3@2.jpg 2x
+                    "
                     src="./images/Project_Card_3.jpg"
                     alt="meditaion app"
                     width="360"
@@ -152,16 +248,21 @@
                   </div>
                 </div>
                 <div class="project-content">
-                  <h2 class="section-subtitle">Meditaion App</h2>
-                  <p class="section-text">App</p>
+                  <h2 class="project-subtitle">Meditaion App</h2>
+                  <p class="project-desc">App</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_4.jpg   1x,
+                      ./images/Project_Card_4@2.jpg 2x
+                    "
                     src="./images/Project_Card_4.jpg"
                     alt="taxi service"
                     width="360"
@@ -177,16 +278,21 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Taxi Service</h2>
-                  <p class="section-text">Marketing</p>
+                  <h2 class="project-subtitle">Taxi Service</h2>
+                  <p class="project-desc">Marketing</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_5.jpg   1x,
+                      ./images/Project_Card_5@2.jpg 2x
+                    "
                     src="./images/Project_Card_5.jpg"
                     alt="screen illustrations"
                     width="360"
@@ -202,16 +308,21 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Screen Illustrations</h2>
-                  <p class="section-text">Design</p>
+                  <h2 class="project-subtitle">Screen Illustrations</h2>
+                  <p class="project-desc">Design</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_6.jpg   1x,
+                      ./images/Project_Card_6@2.jpg 2x
+                    "
                     src="./images/Project_Card_6.jpg"
                     alt="online courses"
                     width="360"
@@ -227,16 +338,21 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Online Courses</h2>
-                  <p class="section-text">Marketing</p>
+                  <h2 class="project-subtitle">Online Courses</h2>
+                  <p class="project-desc">Marketing</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_7.jpg   1x,
+                      ./images/Project_Card_7@2.jpg 2x
+                    "
                     src="./images/Project_Card_7.jpg"
                     alt="instagram stories"
                     width="360"
@@ -252,16 +368,21 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Instagram Stories Concept</h2>
-                  <p class="section-text">Design</p>
+                  <h2 class="project-subtitle">Instagram Stories Concept</h2>
+                  <p class="project-desc">Design</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_8.jpg   1x,
+                      ./images/Project_Card_8@2.jpg 2x
+                    "
                     src="./images/Project_Card_8.jpg"
                     alt="organic food"
                     width="360"
@@ -278,16 +399,21 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Organic Food</h2>
-                  <p class="section-text">Web Site</p>
+                  <h2 class="project-subtitle">Organic Food</h2>
+                  <p class="project-desc">Web Site</p>
                 </div>
               </a>
             </li>
 
             <li class="project-item">
               <a class="project-link" href="#">
-                <div class="project-image">
+                <div class="project-wrap">
                   <img
+                    class="project-imgage"
+                    srcset="
+                      ./images/Project_Card_9.jpg   1x,
+                      ./images/Project_Card_9@2.jpg 2x
+                    "
                     src="./images/Project_Card_9.jpg"
                     alt="cup of coffee"
                     width="360"
@@ -304,8 +430,8 @@
                 </div>
 
                 <div class="project-content">
-                  <h2 class="section-subtitle">Fresh Coffee</h2>
-                  <p class="section-text">Web Site</p>
+                  <h2 class="project-subtitle">Fresh Coffee</h2>
+                  <p class="project-desc">Web Site</p>
                 </div>
               </a>
             </li>
@@ -313,65 +439,81 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="container footer-container">
-        <div>
-          <a class="footer-logo" href="./index.html">
-            <span class="footer-logo-text">Web</span>Studio
-          </a>
-          <p class="footer-text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="footer-socials">
-          <h2 class="footer-socials-title">Social media</h2>
-          <ul class="footer-socials-list">
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href="https://www.instagram.com/">
-                <svg class="footer-socials-icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href="https://twitter.com/">
-                <svg class="footer-socials-icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href="https://www.facebook.com/">
-                <svg class="footer-socials-icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href="https://www.linkedin.com/">
-                <svg class="footer-socials-icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-about">
+          <div class="footer-logo-media">
+            <a class="footer-logo" href="./index.html">
+              <span class="footer-logo-text">Web</span>Studio
+            </a>
+            <p class="footer-text">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+
+          <div class="footer-socials">
+            <h2 class="footer-socials-title">Social media</h2>
+            <ul class="socials-list">
+              <li>
+                <a
+                  class="socials-link footer-link"
+                  href="https://www.instagram.com/"
+                >
+                  <svg class="footer-socials-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="socials-link footer-link" href="https://twitter.com/">
+                  <svg class="footer-socials-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="socials-link footer-link"
+                  href="https://www.facebook.com/"
+                >
+                  <svg class="footer-socials-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="socials-link footer-link"
+                  href="https://www.linkedin.com/"
+                >
+                  <svg class="footer-socials-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <form class="subscribe">
-          <h2 class="footer-socials-title">Subscribe</h2>
-          <input
-            class="subscribe-email"
-            name="email"
-            type="email"
-            placeholder="E-mail"
-          />
-          <button class="footer-btn" type="submit">
-            Subscribe
-            <svg class="footer-icon-subscribe">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </button>
+          <h2 class="subscribe-title">Subscribe</h2>
+          <div class="subscribe-form">
+            <input
+              class="subscribe-email"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button class="footer-btn" type="submit">
+              Subscribe
+              <svg class="footer-icon-subscribe">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
